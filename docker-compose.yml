@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  astro:
+    container_name: angelo-website
+    build: .
+    restart: always
+    ports:
+      - 80:80
+    networks:
+      - lan-network
+
+networks:
+   lan-network:
+      external:
+         name: docker-net
