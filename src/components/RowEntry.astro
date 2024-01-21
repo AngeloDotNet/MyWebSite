@@ -1,0 +1,21 @@
+---
+export interface Props {
+  name: string;
+  title?: string;
+  description: string;
+  subTitle?: string;
+}
+
+const { description, name, title, subTitle } = Astro.props;
+---
+
+<div class="flex flex-row dark:text-white">
+  <div class="mr-2 w-32">{name}</div>
+  <div class="flex-1">
+    <div>
+      {title && <span class="font-bold">{title}</span>}
+      {subTitle && <span>{subTitle}</span>}
+    </div>
+    <div>{description}</div>
+  </div>
+</div>
