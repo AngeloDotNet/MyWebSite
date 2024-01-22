@@ -6,11 +6,12 @@ services:
     build: .
     restart: always
     ports:
-      - 80:80
+      - 8320:80
     networks:
       - lan-network
-
+        
 networks:
-   lan-network:
-      external:
-         name: docker-net
+  lan-network:
+    external:
+      name: docker-net
+      
