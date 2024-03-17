@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm install -g npm@10.3.0
+RUN npm install -g npm@10.5.0
 RUN npm install
 RUN npm ci
 
