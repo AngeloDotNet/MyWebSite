@@ -9,8 +9,8 @@ export interface Props {
 const { description, name, title, subTitle } = Astro.props;
 ---
 
-<div class="flex flex-row dark:text-white mt-3">
-  <div class="mr-2 w-32">{name}</div>
+<div class="flex flex-row dark:text-white mt-4">
+  <div class="mr-2 w-50"> {name}</div>
   <div class="flex-1">
     <div>
       {title && <span class="font-bold">{title}</span>}
