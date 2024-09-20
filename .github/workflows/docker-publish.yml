@@ -1,9 +1,9 @@
 name: Push to DockerHub
 
 on:
-  # push:
-  #   branches: [ "main" ]
-  workflow_dispatch:
+   push:
+     branches: [ "main" ]
+   workflow_dispatch:
 
 jobs:
   build:
@@ -31,11 +31,11 @@ jobs:
          push: true
          tags: ${{ secrets.DOCKER_USERNAME }}/angelo-astro:latest
 
-#      - name: Regenerate environments on Aruba
-#        uses: appleboy/ssh-action@master
-#        with:
-#          host: ${{ secrets.SSH_HOST }}
-#          username: ${{ secrets.SSH_USER }}
-#          password: ${{ secrets.SSH_PASSWORD }}
-#          script: |
-#                    bash /docker/gestionesagre/rigeneraAmbiente.sh
+      - name: Regenerate environments on Aruba
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+                    bash /docker/rigenera_Astro_Angelo.sh
