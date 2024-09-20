@@ -36,6 +36,6 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASSWORD }}
+          password: ${{ secrets.SSH_PASS }}
           script: |
                     bash /docker/rigenera_Astro_Angelo.sh
