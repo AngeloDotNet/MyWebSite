@@ -9,6 +9,8 @@ Furthermore, you can add your own social accounts using `astro-icon`.
 This application is built with `yarn`, but you're free to use any package management you want to.
 
 ```bash
+# update AstroJS and related packages
+$ npx @astrojs/upgrade
 # install all dependencies
 $ yarn
 # start dev server
