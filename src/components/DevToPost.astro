@@ -1,0 +1,19 @@
+---
+export interface Props {
+  post: {
+    title: string;
+    url: string;
+    description: string;
+    published_at: string;
+  };
+}
+const { post } = Astro.props;
+---
+
+<li>
+  <a href={post.url} target="_blank" rel="noopener">
+    <h2>{post.title}</h2>
+  </a>
+  <p>{post.description}</p>
+  <small>Pubblicato il {new Date(post.published_at).toLocaleDateString('it-IT')}</small>
+</li>
